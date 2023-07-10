@@ -3,15 +3,17 @@ package com.thoughtworks.rectangle;
 public class Rectangle {
 
     private int length;
-    private int width;
+    private int breadth;
 
-    public Rectangle(int length, int width) {
+    public Rectangle(int length, int breadth) {
         this.length = length;
-        this.width = width;
+        this.breadth = breadth;
     }
 
     public int calculateArea() {
-        return length * width;
+        if(length < 0 || breadth < 0)
+            return 0;
+        return length * breadth;
     }
 }
 

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class RectangleTest {
 
     @Test
-    public void testCalculateArea() {
+    public void shouldReturnAreaWhenLengthAndBreadthAreGiven() {
         int length = 5;
         int breadth = 10;
         int expectedArea = 50;
@@ -17,7 +17,7 @@ public class RectangleTest {
     }
 
     @Test
-    public void testCalculateAreaWithZeroLength() {
+    public void shouldReturnAreaOfZeroWhenLengthIsZero() {
         int length = 0;
         int breadth = 10;
         int expectedArea = 0;
@@ -29,7 +29,7 @@ public class RectangleTest {
     }
     
     @Test
-    public void testCalculateAreaWithZerobreadth() {
+    public void shouldReturnAreaOfZeroWhenBreadthIsZero() {
         int length = 5;
         int breadth = 0;
         int expectedArea = 0;
@@ -41,10 +41,10 @@ public class RectangleTest {
     }
     
     @Test
-    public void testCalculateAreaWithNegativeLength() {
+    public void shouldReturnAreaOfZeroWhenLengthIsNegative() {
         int length = -5;
         int breadth = 10;
-        int expectedArea = -50;
+        int expectedArea = 0;
 
         Rectangle rectangle = new Rectangle(length, breadth);
         int actualArea = rectangle.calculateArea();
@@ -53,10 +53,10 @@ public class RectangleTest {
     }
     
     @Test
-    public void testCalculateAreaWithNegativebreadth() {
+    public void shouldReturnAreaOfZeroWhenBreadthIsNegative() {
         int length = 5;
         int breadth = -10;
-        int expectedArea = -50;
+        int expectedArea = 0;
 
         Rectangle rectangle = new Rectangle(length, breadth);
         int actualArea = rectangle.calculateArea();
