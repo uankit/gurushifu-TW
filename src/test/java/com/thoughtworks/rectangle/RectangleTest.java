@@ -1,7 +1,9 @@
 package com.thoughtworks.rectangle;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 public class RectangleTest {
 
@@ -13,7 +15,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(length, breadth);
         int actualArea = rectangle.calculateArea();
 
-        Assertions.assertEquals(expectedArea, actualArea, "Area calculation is incorrect");
+        assertThat(actualArea, is(equalTo(expectedArea)));
     }
 
     @Test
@@ -25,7 +27,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(length, breadth);
         int actualArea = rectangle.calculateArea();
 
-        Assertions.assertEquals(expectedArea, actualArea, "Area calculation is incorrect");
+        assertThat(actualArea, is(equalTo(expectedArea)));
     }
     
     @Test
@@ -37,7 +39,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(length, breadth);
         int actualArea = rectangle.calculateArea();
 
-        Assertions.assertEquals(expectedArea, actualArea, "Area calculation is incorrect");
+        assertThat(actualArea, is(equalTo(expectedArea)));
     }
     
     @Test
@@ -49,7 +51,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(length, breadth);
         int actualArea = rectangle.calculateArea();
 
-        Assertions.assertEquals(expectedArea, actualArea, "Area calculation is incorrect");
+        assertThat(actualArea, is(equalTo(expectedArea)));
     }
     
     @Test
@@ -61,6 +63,6 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(length, breadth);
         int actualArea = rectangle.calculateArea();
 
-        Assertions.assertEquals(expectedArea, actualArea, "Area calculation is incorrect");
+        assertThat(actualArea, is(equalTo(expectedArea)));
     }
 }
