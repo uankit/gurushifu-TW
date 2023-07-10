@@ -15,6 +15,13 @@ public class Rectangle {
             return 0;
         return length * breadth;
     }
+
+    
+    public double perimeter() {
+        if(length < 0 || breadth < 0)
+            return 0;
+        return 2 * (length + breadth);
+    }
 }
 
 
